@@ -12,7 +12,8 @@ const ProductCard = (props) => {
         navigate(`/product/${product.id}`)
     }
   return (
-    <Card className='cursor-pointer' sx={{ width: "300px", height:'390px',padding:'16px' }} onClick={handleClick} >
+    <Card className='cursor-pointer'         data-testid="product-card"
+    sx={{ width: "300px", height:'390px',padding:'16px' }} onClick={handleClick} >
       <CardMedia
         sx={{ height: 260,width:260, display:'flex',justifyContent:'center',alignItems:'center',margin:'auto'}}
         image={product.image}

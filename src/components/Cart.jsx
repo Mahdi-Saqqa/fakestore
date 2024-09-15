@@ -27,6 +27,7 @@ const Cart = (props) => {
       <div
         className="fixed bottom-[48px] right-[48px] rounded-full bg-primary color-white p-[8px] cursor-pointer hover:p-[12px]"
         onClick={() => setToggleCart(!toggleCart)}
+        data-testid="cart-icon"
       >
         {cartCount > 0 && (
           <span class="absolute aspect-square  rounded-full p-[2px] bg-[#ffce48] top-[-8px] left-[-8px]   ">
@@ -36,7 +37,9 @@ const Cart = (props) => {
         <ShoppingCartIcon sx={{ color: "white" }} />
       </div>
       {toggleCart && (
-        <div className="fixed flex flex-col w-[600px] translate-x-[-50%] translate-y-[-50%] rounded-xl bg-primary gap-[24px] h-[600px]  top-[50%] left-[50%] p-[24px] ">
+        <div className="fixed flex flex-col w-[600px] translate-x-[-50%] translate-y-[-50%] rounded-xl bg-primary gap-[24px] h-[600px]  top-[50%] left-[50%] p-[24px] "
+        data-testid="Shopping-Cart"
+        >
           <CancelIcon
             onClick={() => setToggleCart(false)}
             className="absolute top-[8px] left-[8px] cursor-pointer "
